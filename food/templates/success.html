@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 mt-3">
+            <h2 class="text-center">Payment successful</h2>
+            <hr />
+        </div>
+    </div>
+
+    <a href="{% url 'menu' %}"><button class="btn btn-primary" type="button">Back to Shopping</button></a>
+</div>
+
+{% endblock %}
