@@ -3,3 +3,12 @@
     height: 200px;
     object-fit: cover;
 }
+.navbar {
+    background-color: #333; /* Set header background color */
+    color: #fff; /* Set text color */
+    padding: 10px; /* Add padding to header */
+    position: fixed; /* Set position to fixed */
+    width: 100%; /* Set width to 100% of the viewport */
+    top: 0; /* Position at the top of the viewport */
+    z-index: 1000; /* Set z-index to ensure it's on top of other elements */
+}
