@@ -1,4 +1,4 @@
-# Namaste PP5-Ecommerce
+# Namaste
 
 ![Am I Responsive](docs/responsive.png)
 
@@ -22,12 +22,6 @@
       - [Models](#models)
   - [Technologies Used](#technologies-used)
   - [Features](#features)
-  - [Validation](#validation)
-  - [Testing](#testing)
-    - [Manual testing](#manual-testing)
-    - [Tests on various devices](#tests-on-various-devices)
-    - [Browser compatibility](#browser-compatibility)
-  - [Bugs](#bugs)
   - [Deployment](#deployment)
   - [Credits](#credits)
   - [Acknowledgements](#acknowledgements)
@@ -256,38 +250,40 @@ I built my database using PostgreSQL. I have opted for PostgreSQL as my database
 
 <hr>
 
-## Technologies Used
+## **Technologies Used**
 
-### Languages & Frameworks
+### **Languages Used**
 
-- HTML
-- CSS
-- Javascript
-- Python
-- Django
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
+-   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [Python](https://www.python.org/)
+-   [jQuery](https://jquery.com/)
 
-### Libraries & Tools
+### **Frameworks, Libraries & Programs Used**
+* [Git](https://git-scm.com/) for version control.
+* [GitHub](https://github.com/) to store the project files.
+* [Canva](https://www.canva.com/) to create the wireframes.
+* [Django](https://www.djangoproject.com/) as the Python Framework.
+* [Heroku](https://www.heroku.com/home/) to deploy the website.
+* [ElephantSQL](https://www.elephantsql.com/) to host the database.
+* [Cloudinary](https://cloudinary.com/) to host images
+* [Django-allauth](https://django-allauth.readthedocs.io/en/latest/) to create accounts.
+* [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) to create the forms based on the models.
+* [Gunicorn](https://gunicorn.org/) as the webserver to host Django on Heroku.
+* [dj-database-url](https://pypi.org/project/dj-database-url/) to create DATABASE_URL to configure the Django application.
+* [psycopg2](https://pypi.org/project/psycopg2/) as PostgreSQL adapter.
+* [Tables Generator](https://www.tablesgenerator.com/markdown_tables) to create tables.
+* [RandomKeyGen](https://randomkeygen.com/) to create the SECRET_KEY for the project.
+* [Google Fonts](https://fonts.google.com/) to import the fonts used on the website.
+* [Bootstrap](https://getbootstrap.com/) for layout.
+* [Lucidchart](https://lucid.app/) for database schema.
+* [Cloudinary](https://cloudinary.com/) used for hosting images
+* [Stripe](https://stripe.com/) to enable secure payment processing capabilities
+* [ElephantSQL](https://www.elephantsql.com/) to host the applications Postgres database
+* [Heroku](https://www.heroku.com/) used to host the deployed back-end site
 
-- [Am I Responsive](http://ami.responsivedesign.is/)
-- [Bootstrap 4](https://getbootstrap.com/)
-- [Favicon.io](https://favicon.io)
-- [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/)
-- [Font Awesome](https://fontawesome.com/)
-- [Git](https://git-scm.com/)
-- [GitHub](https://github.com/)
-- [Google Fonts](https://fonts.google.com/)
-- [Heroku Platform](https://id.heroku.com/login)
-- [jQuery](https://jquery.com)
-- [Postgres](https://www.postgresql.org/)
-- [Balsamiq](https://balsamiq.com/)
-- [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows)
-- Validation:
-  - [WC3 Validator](https://validator.w3.org/)
-  - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)
-  - [JShint](https://jshint.com/)
-  - [CI Python Liner(PEP8)](https://pep8ci.herokuapp.com/)
-  - [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
-  - [Wave Validator](https://wave.webaim.org/)
+---
+<br/>
 
 ## Features
 
@@ -377,3 +373,86 @@ search engines in contextualizing the webpage and aligning it with related searc
 <img src="docs/features/checkout.png">
 </details>
 
+
+
+
+## **Deployment**
+
+## **Remote Deployment**
+
+### **ElephantSQL**
+
+1. Navigate to ElephantSQL.com and create a user account, by using the log-in with GitHub option.
+2. Click “Create New Instance”.
+3. Set up your plan. (You can leave the 'tags' field blank.)
+4. Select a region.
+5. Select a data centre near you
+6. Then click “Review”.
+7. Check your details are correct and then click “Create instance”.
+8. Return to the ElephantSQL dashboard and click on the database instance name for this project
+9. In the URL section, clicking the copy icon will copy the database URL to your clipboard
+
+Before deploying, run 'pip3 freeze > requirements.txt' on the terminal of your IDE of choice.
+
+The site was deployed to Heroku. The steps to deploy are as follows: 
+  1. Create an account and log in your [Heroku](https://id.heroku.com/login) account. 
+  2. On the dashboard, click on the button New -> Create new app on the right side of the page.
+  3. Choose a name and select your region. Click on Create app.
+  4. Go to the Settings tab. Scroll down to Config Vars. 
+  - Add key PORT and value 8000.
+  - Add key DATABASE_URL and add the value of your database on ElephantSQL or other host of choice.
+  - Add key CLOUDINARY_URL and add the value of your cloudinary host link.
+  - Add key SECRET_KEY and add the value of your choice for this secret key.
+  - Add key STRIPE_PUBLIC_KEY and add the value of your choice for this secret key.
+  - Add key STRIPE_SECRET_KEY and add the value of your choice for this secret key.
+  - Add key STRIPE_WH_SECRET and add the value of your choice for this secret key.
+ 
+  5. Go to the Deploy tab. Select GitHub as Deployment Method. Connect your account.
+  6. Enter the name of the repository that you forked, search and connect.
+  7. Select the branch and click Deploy Branch.
+
+The live link can be found here - [https://github.com/vinuc49/project5_django](https://project5-food-eff6062cfe83.herokuapp.com/)
+
+## **Local Deployment**
+
+### **How to Fork**
+
+  1. Log In or Sign Up to GitHub.
+  2. Go to this project repository [https://github.com/vinuc49/project5_django](https://github.com/vinuc49/project5_django)
+  2. On the top right of the page, there's a button with the option Fork. Click on it.
+  3. A new page, "Create a new fork", will open. If you wish, you can edit the name.
+  4. At the end of the page, click on "Create fork".
+  5. Now, you have a copy of the project in your repositories.
+
+### **How to Clone**
+
+  1. Log In or Sign Up to GitHub.
+  2. Go to this project repository [https://github.com/vinuc49/project5_django](https://github.com/vinuc49/project5_django)
+  3. Click on the Code button and select if you would like to clone with HTTPS, SSH or GitHub CLI and copy the link.
+  4. Open the terminal in the code editor of your choice and change the current working directory to the one you will use for to clone the repository.
+  5. Type 'git clone' into the terminal and then paste the link you copied before and press Enter.
+
+
+### **Using Gitpod**
+
+If you would like to edit your copy of this repository on Gitpod, you will need to: 
+  1. On your browser of choice, install the Gitpod extension/add-on.
+  2. On GitHub, open the project repository you forked before.
+  3. On the top of the page, over the files, there is a green button on the right side of the page saying "Gitpod". Click it.
+  4. It will open the Gitpod website. On the first time, you will select to connect with your GitHub account and Authorize gitpod-io. After that, you'll create an account.
+  5. It might take a while after that because Gitpod will create your workspace.
+  After the workspace is loaded, you can edit it on Gitpod.
+---
+<br/>
+
+## **Credits**
+
+- Boutique Ado project was used as a base in development of this website
+
+<br/>
+
+## **Acknowledgments**
+
+- I would like to thank my Code Institute mentor for his support and feedback throughout this project.
+- I would like to thank my spouse for her understanding, patience, and support while I developed this project.
+- I would like to thank to Code Institute tutors. Developing this project I used tutors support a lot. Thanks a million, guys, for your patience, attention, help, and support. 
